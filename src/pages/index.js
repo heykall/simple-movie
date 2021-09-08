@@ -1,0 +1,5 @@
+export { Home } from "./home"
+export { MovieList } from "./movie-list"
+export { MyList } from "./my-list"
+export { DetailMovie } from "./detail-movie"
+export { NotFound } from "./404(not-found)"

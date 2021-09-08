@@ -1,0 +1,1 @@
+export { default as DetailMovie} from './detail-movie'
