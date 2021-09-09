@@ -1,12 +1,16 @@
 import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 import styles from './styles.scoped.css';
 import { MovieListContext } from '../../pages/movie-list'
 
 const CardList = () => {
   const movieList = useContext(MovieListContext)
-  if (movieList) {
-    console.log(movieList.Search);
+  const history = useHistory()
+
+  const goToDetail = (movie) => {
+    history.push(`/movie/detail/${movie.imdbID}`, { detailMovie: movie })
   }
+
   return (
     <div className={styles.cards}>
       <ul className="cards">
@@ -18,7 +22,7 @@ const CardList = () => {
               <h2 className="card_title">{movie.Title}</h2>
               <p className="card_text">{movie.Years}</p>
               <p className="card_text">Type : {movie.Type}</p>
-              <button className="btn card_btn">Detail</button>
+              <button onClick={()=> goToDetail(movie)} className="btn card_btn">Detail</button>
             </div>
           </div>
         </li>)}

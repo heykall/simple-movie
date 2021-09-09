@@ -2,6 +2,7 @@ import React,{ useEffect, useState, createContext } from 'react'
 import { Navbar, CardList } from '../../components'
 import axios from 'axios'
 
+const { REACT_APP_API_KEY } = process.env
 const client = axios.create({
   baseURL: "https://www.omdbapi.com" 
 });
@@ -12,7 +13,7 @@ const MovieList = () => {
   const [movies, setMovies] = useState(null)
 
   useEffect(() => {
-    client.get(`/?s=Pokemon&page=1&apikey=f0ece13b`).then((response) => {
+    client.get(`/?s=Pokemon&page=1&apikey=${REACT_APP_API_KEY}`).then((response) => {
       setMovies(response.data.Search);
     });
   }, []);

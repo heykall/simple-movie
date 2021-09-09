@@ -7,7 +7,7 @@ const Home = () => {
     <div className={styles.center}>
       <div className="center">
         <div className="button-container">
-          <Link to="/movie-list">
+          <Link to="/movie/list">
           <h1 className='explore'>Explore Movies</h1>  
           </Link>
         </div>
