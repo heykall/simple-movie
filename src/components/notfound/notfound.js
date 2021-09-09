@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles.scoped.css';
-import { Link } from 'react-router-dom'
 
 const NotFound = () => {
   return (
