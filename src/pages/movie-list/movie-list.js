@@ -12,13 +12,14 @@ const MovieList = () => {
   const [movies, setMovies] = useState(null)
 
   useEffect(() => {
-    client.get(`/?s=Pokemon&page=1\&apikey=f0ece13b`).then((response) => {
+    client.get(`/?s=Pokemon&page=1&apikey=f0ece13b`).then((response) => {
       setMovies(response.data.Search);
     });
   }, []);
 
   return (
     <div>
+      <Navbar/>
       <MovieListContext.Provider value={movies}>
         <CardList/>
       </MovieListContext.Provider>

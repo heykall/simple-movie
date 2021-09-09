@@ -1,9 +1,10 @@
 import React from 'react'
-
+import { Navbar } from '../../components'
 const MyList = () => {
   return (
     <div>
-      <p>Ini di My List</p>
+      <Navbar/>
+      <h1>Ini di My List</h1>
     </div>
   )
 }
